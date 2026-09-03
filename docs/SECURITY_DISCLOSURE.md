@@ -1,6 +1,6 @@
 # GBE-Pico — Network & Security Notes for School IT
 
-*Applies to firmware 0.8.x and later. Last updated 2026-07-26.*
+*Applies to firmware 0.8.x and later. Last updated 2026-09-03.*
 
 ## Network footprint
 
@@ -44,7 +44,7 @@
 ## Access model
 
 Physical access = authorized to configure (SD card, USB console, nearby
-Bluetooth pending the PIN update). The device stores no student data.
+Bluetooth). The device stores no student data.
 
 **Radio lockdown:** setting `WIFI_ENABLED` and `BLUETOOTH_ENABLED` to `false`
 in `wifi_bluetooth_enabled.json` on the SD card silences both radios; the
