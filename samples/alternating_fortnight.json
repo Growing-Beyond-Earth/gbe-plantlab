@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "default_actions": {
+      "fan": 96
+    },
+    "loops": [
+      {
+        "type": "time",
+        "id": "baseline_light",
+        "start": "07:00",
+        "end": "19:00",
+        "actions": {
+          "white": 60,
+          "red": 5,
+          "blue": 20
+        }
+      },
+      {
+        "type": "repeat_days",
+        "id": "high_light_fortnight",
+        "interval_days": 28,
+        "duration_days": 14,
+        "loops": [
+          {
+            "type": "time",
+            "start": "06:00",
+            "end": "20:00",
+            "actions": {
+              "white": 180,
+              "red": 30,
+              "blue": 10
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

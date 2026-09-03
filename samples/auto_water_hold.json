@@ -1,0 +1,53 @@
+{
+  "format_version": 3,
+  "program_name": "White auto-water",
+  "default_actions": {
+    "aux": 0,
+    "fan": 64,
+    "red": 0,
+    "blue": 0,
+    "green": 0,
+    "white": 0
+  },
+  "loops": [
+    {
+      "type": "time",
+      "id": "grow_light",
+      "start": "07:00",
+      "end": "19:00",
+      "actions": {
+        "red": 0,
+        "blue": 0,
+        "green": 0,
+        "white": 119,
+        "target_watts": 25
+      }
+    },
+    {
+      "type": "sensor",
+      "id": "hold_humidity",
+      "condition": {
+        "sensor": "humidity",
+        "comparison": "<",
+        "value": 60
+      },
+      "actions": {
+        "fan": 0
+      }
+    },
+    {
+      "type": "sensor",
+      "id": "soil_moisture_check",
+      "check_interval": "00:30:00",
+      "condition": {
+        "sensor": "soil_moisture",
+        "comparison": "<",
+        "value": 88,
+        "hold": "00:03:00"
+      },
+      "actions": {
+        "aux": 255
+      }
+    }
+  ]
+}

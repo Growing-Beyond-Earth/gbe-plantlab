@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "default_actions": {
+      "fan": 96
+    },
+    "loops": [
+      {
+        "type": "date_range",
+        "id": "phase1_seedling",
+        "duration_days": 14,
+        "loops": [
+          {
+            "type": "time",
+            "start": "07:00",
+            "end": "19:00",
+            "actions": {
+              "white": 60,
+              "red": 5,
+              "blue": 20
+            }
+          }
+        ]
+      },
+      {
+        "type": "date_range",
+        "id": "phase2_vegetative",
+        "after_days": 14,
+        "duration_days": 14,
+        "loops": [
+          {
+            "type": "time",
+            "start": "06:00",
+            "end": "20:00",
+            "actions": {
+              "white": 140,
+              "red": 9,
+              "blue": 26
+            }
+          }
+        ]
+      },
+      {
+        "type": "date_range",
+        "id": "phase3_flowering",
+        "after_days": 28,
+        "duration_days": 21,
+        "loops": [
+          {
+            "type": "time",
+            "start": "06:00",
+            "end": "18:00",
+            "actions": {
+              "white": 180,
+              "red": 30,
+              "blue": 10
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "settings": {
+    "default_actions": {
+      "fan": 96
+    },
+    "loops": [
+      {
+        "type": "time",
+        "id": "grow_light",
+        "start": "07:00",
+        "end": "19:00",
+        "actions": {
+          "red": 9,
+          "blue": 26,
+          "green": 0,
+          "white": 98,
+          "target_watts": 25
+        }
+      },
+      {
+        "type": "repeat_days",
+        "id": "watering_days",
+        "start_date": "2026-09-01",
+        "interval_days": 3,
+        "end_date": "2026-12-15",
+        "loops": [
+          {
+            "type": "repeat",
+            "id": "watering_pulses",
+            "start": "08:00",
+            "interval": "04:00",
+            "duration": "00:08:00",
+            "until": "20:01",
+            "actions": {
+              "aux": 255
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

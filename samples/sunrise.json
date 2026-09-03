@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "default_actions": {
+      "fan": 96
+    },
+    "loops": [
+      {
+        "type": "time",
+        "start": "06:00",
+        "end": "08:00",
+        "actions": {
+          "white": {
+            "ramp": {
+              "from": 0,
+              "to": 180
+            }
+          },
+          "red": {
+            "ramp": {
+              "from": 40,
+              "to": 10
+            }
+          }
+        }
+      },
+      {
+        "type": "time",
+        "start": "08:00",
+        "end": "18:00",
+        "actions": {
+          "white": 180,
+          "red": 10
+        }
+      },
+      {
+        "type": "time",
+        "start": "18:00",
+        "end": "20:00",
+        "actions": {
+          "white": {
+            "ramp": {
+              "from": 180,
+              "to": 0
+            }
+          }
+        }
+      }
+    ]
+  }
+}

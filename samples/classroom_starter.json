@@ -1,0 +1,17 @@
+{
+  "program_name": "Classroom starter",
+  "loops": [
+    {
+      "type": "time",
+      "id": "grow_light",
+      "start": "07:00",
+      "end": "19:00",
+      "actions": { "red": 9, "blue": 26, "white": 98, "target_watts": 25 }
+    },
+    {
+      "type": "time",
+      "id": "fan_always",
+      "actions": { "fan": 96 }
+    }
+  ]
+}
