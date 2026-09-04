@@ -1,7 +1,6 @@
 # Installing PlantLab Software with a USB Cable
 
-**You rarely need this.** A PlantLab already running the new software updates
-itself over WiFi or through the GBE Connect app. Use this guide only to:
+**You rarely need this.** Most PlantLabs update themselves over WiFi or through the GBE Connect app. Use this guide only to:
 
 - upgrade a PlantLab from the **original 2024 or 2025 MicroPython software**, or
 - **recover** a unit that isn't starting properly.
