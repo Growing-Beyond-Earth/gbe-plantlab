@@ -1,8 +1,6 @@
 # PlantLab Guide for School IT
 
-*The detailed companion to [SECURITY_DISCLOSURE.md](SECURITY_DISCLOSURE.md)
-(the one-page summary of the same facts). Applies to firmware 1.0 and later.
-Last updated 2026-09-10.*
+*Applies to firmware 1.0 and later. Last updated 2026-09-10.*
 
 > **Devices shipped before 2026** run the original MicroPython firmware and
 > are not as described in this document until updated. The update is a
@@ -35,6 +33,12 @@ The device:
 - Logs readings to its SD card every 10 minutes and, when connected to
   WiFi, reports the same readings to the GBE server, where the class can
   view current conditions and history online.
+
+Scanning the **QR code on the PlantLab's LED panel** opens that device's
+page, which shows its hardware details — MAC address, firmware version,
+device ID, and device name — along with the latest version of this and the
+other PlantLab documents. This is the quickest way to collect a unit's MAC
+address for network registration.
 
 ## How a classroom gets set up
 
@@ -139,8 +143,10 @@ passwords are never transmitted to GBE — see below.
 - Units upgraded from the original MicroPython firmware read that system's
   plaintext `wifi_settings.json` from the card once, then scrub and delete
   it.
-- Support diagnostics (`logs/startup/output.txt` on the SD card) include the
-  network name and signal data, never the password.
+- When troubleshooting a device, the GBE team may ask a teacher to send
+  `logs/startup/output.txt` from the SD card (boot output, overwritten each
+  boot). It contains the firmware version, hardware status, network name,
+  and signal strength/scan results — never the WiFi password.
 
 ## Firmware updates
 

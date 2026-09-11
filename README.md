@@ -38,11 +38,9 @@ class. Start with `classroom_starter.json`.
 
 ## For your IT department
 
-- **[PlantLab Guide for School IT](docs/PLANTLAB_IT_GUIDE.md)** — what the
-  device is, how setup and updates work, how it uses the network, and what
-  it sends — written to answer the questions school IT will ask.
-- **[Security disclosure](docs/SECURITY_DISCLOSURE.md)** — the one-page
-  summary of the same facts.
+[PlantLab Guide for School IT](docs/PLANTLAB_IT_GUIDE.md) — what the device
+is, how setup and updates work, how it uses the network, and what it sends —
+written to answer the questions school IT will ask.
 
 ## Questions?
 
