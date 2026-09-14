@@ -65,9 +65,15 @@ reduced experience; see "Operation without WiFi" below.
 
 ## Network behavior
 
-- WiFi client only: WPA2, 2.4 GHz. The device never creates an access point
-  and never listens for inbound connections — there are no open ports to
-  scan and no web interface on the device.
+- WiFi client only: WPA2-Personal (a network name and password), 2.4 GHz.
+  The device never creates an access point and never listens for inbound
+  connections — there are no open ports to scan and no web interface on the
+  device.
+- **The PlantLab does not support enterprise WiFi.** Networks requiring
+  802.1X/RADIUS authentication (WPA2-Enterprise), per-user logins, captive
+  portals, or web-based sign-in pages will not work. This is the most common
+  WiFi obstacle teachers encounter; the solution is a guest or IoT network
+  with an ordinary pre-shared password.
 - All traffic is outbound:
 
 | Destination | Protocol | Purpose |
@@ -85,9 +91,9 @@ reduced experience; see "Operation without WiFi" below.
 - WiFi is optional but recommended (see "Operation without WiFi"). Both
   radios can be disabled outright (see "Controls available to IT").
 
-**Recommended placement:** a guest network or IoT VLAN, per normal IoT
-practice, with outbound TCP 443 to `growingbeyond.earth` and UDP 123
-allowed. No captive portal.
+**Recommended placement:** a guest network or IoT VLAN with an ordinary
+pre-shared password, per normal IoT practice, with outbound TCP 443 to
+`growingbeyond.earth` and UDP 123 allowed.
 
 ## Bluetooth
 
